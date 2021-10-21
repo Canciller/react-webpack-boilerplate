@@ -1,12 +1,18 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   context: __dirname,
   entry: path.join(__dirname, 'src', 'index.tsx'),
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json']
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        extensions: ['.ts', '.tsx', '.js', '.json']
+      })
+    ]
   },
   module: {
     rules: [
