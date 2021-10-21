@@ -8,8 +8,19 @@ module.exports = merge(common, {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dev'),
-    publicPath: '/',
     clean: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      }
+    ]
   },
   devServer: {
     port: 3000,

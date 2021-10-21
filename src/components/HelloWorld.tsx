@@ -1,7 +1,10 @@
 import React from 'react';
+import styles from './HelloWorld.module.scss'
 
 export default function HelloWorld() {
   return (
-    <p>Hello, World!</p>
+    <p
+      className={styles.root}
+    >Hello, World!</p>
   )
 }
