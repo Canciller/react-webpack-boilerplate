@@ -5,7 +5,18 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch localhost",
+      "name": "Attach Firefox",
+      "type": "firefox",
+      "request": "attach",
+      "pathMappings": [
+        {
+          "url": "webpack://${workspaceFolderBasename}/src",
+          "path": "${workspaceFolder}/src"
+        }
+      ]
+    },
+    {
+      "name": "Launch Firefox",
       "type": "firefox",
       "request": "launch",
       "reAttach": true,
@@ -17,6 +28,13 @@
           "path": "${workspaceFolder}/src"
         }
       ]
+    },
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "pwa-chrome",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }

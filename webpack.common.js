@@ -37,6 +37,9 @@ module.exports = {
           syntactic: true
         },
         mode: 'write-references'
+      },
+      eslint: {
+        files: './src/**/*.{ts,tsx,js,jsx}'
       }
     })
   ]
