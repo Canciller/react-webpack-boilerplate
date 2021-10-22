@@ -9,5 +9,8 @@ module.exports = {
   moduleNameMapper: {
     ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
     '\\.s[ac]ss$': 'identity-obj-proxy'
-  }
+  },
+  modulePathIgnorePatterns: [
+    '<rootDir>/cypress'
+  ]
 }
