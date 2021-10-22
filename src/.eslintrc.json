@@ -21,7 +21,7 @@
             "position": "before"
           },
           {
-            "pattern": "./*.module.scss",
+            "pattern": "./*.scss",
             "group": "index",
             "position": "after"
           }
